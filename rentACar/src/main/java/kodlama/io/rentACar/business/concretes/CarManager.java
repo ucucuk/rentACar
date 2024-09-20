@@ -40,10 +40,6 @@ public class CarManager implements CarService {
 //				.collect(Collectors.toList());
 		List<CarDto> allCarsResponses = new ArrayList<CarDto>();
 		allCarsResponses = cars.stream().map(car -> this.carMapper.map(car)).collect(Collectors.toList());
-//		allCarsResponses = cars.stream()
-//				.map(car -> this.carMapper.map(car))
-//				.filter(car -> car.getModel().getBrand().getName().equalsIgnoreCase("Kia"))
-//				.collect(Collectors.toList());
 		return allCarsResponses;
 	}
 
@@ -95,7 +91,6 @@ public class CarManager implements CarService {
 		List<Car> cars = carRepository.findByCarBrandNameIgnoreCaseJPQL(brand);
 		List<CarDto> getCarfindByBrand = this.carMapper.listMap(cars);
 
-		
 		return getCarfindByBrand;
 	}
 

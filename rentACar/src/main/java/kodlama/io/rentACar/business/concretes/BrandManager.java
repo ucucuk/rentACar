@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import kodlama.io.rentACar.business.abstracts.BrandService;
 import kodlama.io.rentACar.business.requests.CreateBrandRequest;
 import kodlama.io.rentACar.business.requests.UpdateBrandRequest;
-import kodlama.io.rentACar.business.responses.brand.GetAllBrandsResponse;
 import kodlama.io.rentACar.business.responses.brand.GetByIdBrandResponse;
 import kodlama.io.rentACar.business.responses.brand.GetByNameBrandResponse;
 import kodlama.io.rentACar.business.responses.brand.GetByNameIsNotNullBrandResponse;

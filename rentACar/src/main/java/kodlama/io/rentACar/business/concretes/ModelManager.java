@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import kodlama.io.rentACar.business.abstracts.ModelService;
 import kodlama.io.rentACar.business.requests.CreateModelRequest;
-import kodlama.io.rentACar.business.responses.model.GetAllModelsResponse;
 import kodlama.io.rentACar.business.rules.ModelBusinessRules;
 import kodlama.io.rentACar.core.utilities.mappers.ModelMapper;
 import kodlama.io.rentACar.core.utilities.mappers.ModelMapperService;
