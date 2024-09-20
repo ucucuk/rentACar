@@ -9,9 +9,10 @@ import kodlama.io.rentACar.business.responses.brand.GetByIdBrandResponse;
 import kodlama.io.rentACar.business.responses.brand.GetByNameBrandResponse;
 import kodlama.io.rentACar.business.responses.brand.GetByNameIsNotNullBrandResponse;
 import kodlama.io.rentACar.business.responses.brand.GetByNameIsNullBrandResponse;
+import kodlama.io.rentACar.entities.concretes.BrandDto;
 
 public interface BrandService {
-	List<GetAllBrandsResponse> getAll();
+	List<BrandDto> getAll();
 
 	GetByIdBrandResponse getById(int id);
 

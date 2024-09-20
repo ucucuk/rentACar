@@ -15,25 +15,29 @@ import kodlama.io.rentACar.business.responses.brand.GetByNameBrandResponse;
 import kodlama.io.rentACar.business.responses.brand.GetByNameIsNotNullBrandResponse;
 import kodlama.io.rentACar.business.responses.brand.GetByNameIsNullBrandResponse;
 import kodlama.io.rentACar.business.rules.BrandBusinessRules;
+import kodlama.io.rentACar.core.utilities.mappers.BrandMapper;
 import kodlama.io.rentACar.core.utilities.mappers.ModelMapperService;
 import kodlama.io.rentACar.dataAccess.abstracts.BrandRepository;
 import kodlama.io.rentACar.entities.concretes.Brand;
+import kodlama.io.rentACar.entities.concretes.BrandDto;
 import lombok.AllArgsConstructor;
 
-@Service // IOC 
+@Service // IOC
 @AllArgsConstructor
 public class BrandManager implements BrandService {
 	private BrandRepository brandRepository;
 	private ModelMapperService modelMapperService;
 	private BrandBusinessRules brandBusinessRules;
+	private BrandMapper brandMapper;
 
 	@Override
-	public List<GetAllBrandsResponse> getAll() {
+	public List<BrandDto> getAll() {
 		List<Brand> brands = brandRepository.findAll();
-		List<GetAllBrandsResponse> brandsResponse = brands.stream()
-				.map(brand -> this.modelMapperService.forResponse().map(brand, GetAllBrandsResponse.class))
+//		List<GetAllBrandsResponse> brandsResponse = brands.stream()
+//				.map(brand -> this.modelMapperService.forResponse().map(brand, GetAllBrandsResponse.class))
+//				.collect(Collectors.toList());
+		List<BrandDto> brandsResponse = brands.stream().map(brand -> brandMapper.map(brand))
 				.collect(Collectors.toList());
-
 		return brandsResponse;
 	}
 

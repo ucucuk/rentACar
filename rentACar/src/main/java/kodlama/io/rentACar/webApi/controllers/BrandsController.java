@@ -22,6 +22,7 @@ import kodlama.io.rentACar.business.responses.brand.GetByIdBrandResponse;
 import kodlama.io.rentACar.business.responses.brand.GetByNameBrandResponse;
 import kodlama.io.rentACar.business.responses.brand.GetByNameIsNotNullBrandResponse;
 import kodlama.io.rentACar.business.responses.brand.GetByNameIsNullBrandResponse;
+import kodlama.io.rentACar.entities.concretes.BrandDto;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
@@ -51,7 +52,7 @@ public class BrandsController {
 	}
 
 	@GetMapping()
-	public List<GetAllBrandsResponse> getAll() {
+	public List<BrandDto> getAll() {
 		return brandService.getAll();
 	}
 

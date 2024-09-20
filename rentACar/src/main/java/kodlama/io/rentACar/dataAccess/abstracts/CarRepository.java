@@ -7,16 +7,19 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import kodlama.io.rentACar.entities.concretes.Car;
+import kodlama.io.rentACar.entities.concretes.CarDto;
 
 public interface CarRepository extends JpaRepository<Car, Integer> {
 
 	boolean existsByPlateIgnoreCase(String name); // spring jpa keywords
 
-
 	Car findByPlateIgnoreCase(String plate);
 
 	@Query("SELECT c FROM Car c WHERE c.modelYear=:modelyear")
-	List<Car> findByModelYearJPQL(@Param("modelyear") int modelYear); 
+	List<Car> findByModelYearJPQL(@Param("modelyear") int modelYear);
+
+	@Query("SELECT c FROM Car c JOIN c.model.brand b WHERE LOWER(b.name)=LOWER(:brand)")
+	List<Car> findByCarBrandNameIgnoreCaseJPQL(@Param("brand") String brand);
 
 //	List<Car> findByModelYear(int modelYear);
 

@@ -9,14 +9,15 @@ import org.springframework.stereotype.Service;
 import kodlama.io.rentACar.business.abstracts.CarService;
 import kodlama.io.rentACar.business.requests.CreateCarRequest;
 import kodlama.io.rentACar.business.requests.UpdateCarRequest;
-import kodlama.io.rentACar.business.responses.car.GetAllCarsResponse;
 import kodlama.io.rentACar.business.responses.car.GetByModelYearJPQLCarsResponse;
 import kodlama.io.rentACar.business.responses.car.GetByPlateCarResponse;
 import kodlama.io.rentACar.business.rules.CarBusinessRules;
+import kodlama.io.rentACar.core.utilities.mappers.CarMapper;
 import kodlama.io.rentACar.core.utilities.mappers.ModelMapperService;
 import kodlama.io.rentACar.dataAccess.abstracts.CarRepository;
 import kodlama.io.rentACar.dataAccess.abstracts.ModelRepository;
 import kodlama.io.rentACar.entities.concretes.Car;
+import kodlama.io.rentACar.entities.concretes.CarDto;
 import kodlama.io.rentACar.entities.concretes.Model;
 import lombok.AllArgsConstructor;
 
@@ -27,15 +28,22 @@ public class CarManager implements CarService {
 	private ModelRepository modelRepository;
 	private ModelMapperService modelMapperService;
 	private CarBusinessRules carBusinessRules;
+	private final CarMapper carMapper;
 
 	@Override
-	public List<GetAllCarsResponse> getAll() {
+	public List<CarDto> getAll() {
 		// TODO Auto-generated method stub
 		List<Car> cars = carRepository.findAll();
-		List<GetAllCarsResponse> allCarsResponses = new ArrayList<GetAllCarsResponse>();
-		allCarsResponses = cars.stream()
-				.map(car -> this.modelMapperService.forResponse().map(car, GetAllCarsResponse.class))
-				.collect(Collectors.toList());
+//		List<GetAllCarsResponse> allCarsResponses = new ArrayList<GetAllCarsResponse>();
+//		allCarsResponses = cars.stream()
+//				.map(car -> this.modelMapperService.forResponse().map(car, GetAllCarsResponse.class))
+//				.collect(Collectors.toList());
+		List<CarDto> allCarsResponses = new ArrayList<CarDto>();
+		allCarsResponses = cars.stream().map(car -> this.carMapper.map(car)).collect(Collectors.toList());
+//		allCarsResponses = cars.stream()
+//				.map(car -> this.carMapper.map(car))
+//				.filter(car -> car.getModel().getBrand().getName().equalsIgnoreCase("Kia"))
+//				.collect(Collectors.toList());
 		return allCarsResponses;
 	}
 
@@ -79,6 +87,16 @@ public class CarManager implements CarService {
 				.map(car -> this.modelMapperService.forResponse().map(car, GetByModelYearJPQLCarsResponse.class))
 				.collect(Collectors.toList());
 		return findByModelYear;
+	}
+
+	@Override
+	public List<CarDto> getCarfindByBrand(String brand) {
+		// TODO Auto-generated method stub
+		List<Car> cars = carRepository.findByCarBrandNameIgnoreCaseJPQL(brand);
+		List<CarDto> getCarfindByBrand = this.carMapper.listMap(cars);
+
+		
+		return getCarfindByBrand;
 	}
 
 }

@@ -15,9 +15,9 @@ import jakarta.validation.Valid;
 import kodlama.io.rentACar.business.abstracts.CarService;
 import kodlama.io.rentACar.business.requests.CreateCarRequest;
 import kodlama.io.rentACar.business.requests.UpdateCarRequest;
-import kodlama.io.rentACar.business.responses.car.GetAllCarsResponse;
 import kodlama.io.rentACar.business.responses.car.GetByModelYearJPQLCarsResponse;
 import kodlama.io.rentACar.business.responses.car.GetByPlateCarResponse;
+import kodlama.io.rentACar.entities.concretes.CarDto;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
@@ -32,8 +32,16 @@ public class CarController {
 		this.carService.add(createCarRequest);
 	}
 
+//	@GetMapping
+//	public List<GetAllCarsResponse> getAll() {
+//		return this.carService.getAll();
+//	}
+	@GetMapping("findbybrand")
+	public List<CarDto> getCarfindByBrand(String brand) {
+		return this.carService.getCarfindByBrand(brand);
+	}
 	@GetMapping
-	public List<GetAllCarsResponse> getAll() {
+	public List<CarDto> getAll() {
 		return this.carService.getAll();
 	}
 

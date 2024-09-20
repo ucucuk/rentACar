@@ -23,7 +23,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Model {
+public class Model { 
 	@Id // Primary Key
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")

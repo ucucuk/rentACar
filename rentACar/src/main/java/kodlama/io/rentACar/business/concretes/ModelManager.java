@@ -9,11 +9,13 @@ import kodlama.io.rentACar.business.abstracts.ModelService;
 import kodlama.io.rentACar.business.requests.CreateModelRequest;
 import kodlama.io.rentACar.business.responses.model.GetAllModelsResponse;
 import kodlama.io.rentACar.business.rules.ModelBusinessRules;
+import kodlama.io.rentACar.core.utilities.mappers.ModelMapper;
 import kodlama.io.rentACar.core.utilities.mappers.ModelMapperService;
 import kodlama.io.rentACar.dataAccess.abstracts.BrandRepository;
 import kodlama.io.rentACar.dataAccess.abstracts.ModelRepository;
 import kodlama.io.rentACar.entities.concretes.Brand;
 import kodlama.io.rentACar.entities.concretes.Model;
+import kodlama.io.rentACar.entities.concretes.ModelDto;
 import lombok.AllArgsConstructor;
 
 @Service
@@ -23,15 +25,17 @@ public class ModelManager implements ModelService {
 	private ModelRepository modelRepository;
 	private ModelMapperService modelMapperService;
 	private ModelBusinessRules modelBusinessRules;
+	private ModelMapper modelMapper;
 
 	@Override
-	public List<GetAllModelsResponse> getAll() {
+	public List<ModelDto> getAll() {
 
 		List<Model> models = modelRepository.findAll();
-		List<GetAllModelsResponse> modelsResponse = models.stream()
-				.map(model -> this.modelMapperService.forResponse().map(model, GetAllModelsResponse.class))
+//		List<GetAllModelsResponse> modelsResponse = models.stream()
+//				.map(model -> this.modelMapperService.forResponse().map(model, GetAllModelsResponse.class))
+//				.collect(Collectors.toList());
+		List<ModelDto> modelsResponse = models.stream().map(model -> modelMapper.map(model))
 				.collect(Collectors.toList());
-
 		return modelsResponse;
 	}
 

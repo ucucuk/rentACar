@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import jakarta.validation.Valid;
 import kodlama.io.rentACar.business.abstracts.ModelService;
 import kodlama.io.rentACar.business.requests.CreateModelRequest;
-import kodlama.io.rentACar.business.responses.model.GetAllModelsResponse;
+import kodlama.io.rentACar.entities.concretes.ModelDto;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
@@ -25,7 +25,7 @@ public class ModelsController {
 	private ModelService modelService;
 
 	@GetMapping()
-	public List<GetAllModelsResponse> getAll() {
+	public List<ModelDto> getAll() {
 		return modelService.getAll();
 	}
 
