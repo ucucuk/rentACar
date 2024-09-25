@@ -1,0 +1,129 @@
+2024-09-25 15:26:26,972 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25 15:26:26,972 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-09-25 15:26:26,973 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2024-09-25 15:26:26,975 INFO k.i.r.w.c.CarController [http-nio-8080-exec-1] Get All Cars Controller INFO
+2024-09-25 15:26:26,975 WARN k.i.r.w.c.CarController [http-nio-8080-exec-1] Get All Cars Controller WARN
+2024-09-25 15:26:26,975 INFO k.i.r.b.c.CarManager [http-nio-8080-exec-1] Car Manager Get All INFO
+2024-09-25 15:26:26,975 WARN k.i.r.b.c.CarManager [http-nio-8080-exec-1] Car Manager Get All WARN
+2024-09-25 15:26:54,394 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-09-25 15:26:54,403 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-71] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25 15:26:54,404 INFO c.z.h.HikariDataSource [Thread-71] HikariPool-18 - Shutdown initiated...
+2024-09-25 15:26:54,409 INFO c.z.h.HikariDataSource [Thread-71] HikariPool-18 - Shutdown completed.
+2024-09-25 15:26:54,513 INFO o.s.b.StartupInfoLogger [restartedMain] Starting RentACarApplication using Java 22.0.1 with PID 12764 (C:\Users\Ulaş Gaming\git\repository2\rentACar\target\classes started by Ulaş Gaming in C:\Users\Ulaş Gaming\git\repository2\rentACar)
+2024-09-25 15:26:54,513 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-09-25 15:26:54,678 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25 15:26:54,695 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 15 ms. Found 3 JPA repository interfaces.
+2024-09-25 15:26:54,757 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
+2024-09-25 15:26:54,757 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-09-25 15:26:54,758 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-25 15:26:54,782 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-09-25 15:26:54,782 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 268 ms
+2024-09-25 15:26:54,806 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25 15:26:54,806 WARN o.h.j.b.i.EntityManagerFactoryBuilderImpl [restartedMain] HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2024-09-25 15:26:54,808 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2024-09-25 15:26:54,815 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25 15:26:54,816 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-19 - Starting...
+2024-09-25 15:26:54,862 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-19 - Added connection org.postgresql.jdbc.PgConnection@26bce51d
+2024-09-25 15:26:54,862 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-19 - Start completed.
+2024-09-25 15:26:54,871 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-25 15:26:54,921 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25 15:26:54,976 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25 15:26:55,097 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25 15:26:55,205 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-09-25 15:26:55,214 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8080 (http) with context path '/'
+2024-09-25 15:26:55,216 INFO o.s.b.StartupInfoLogger [restartedMain] Started RentACarApplication in 0.74 seconds (process running for 582.46)
+2024-09-25 15:26:55,217 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2024-09-25 15:26:58,547 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25 15:26:58,547 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-09-25 15:26:58,548 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2024-09-25 15:26:58,550 INFO k.i.r.w.c.CarController [http-nio-8080-exec-1] Get All Cars Controller INFO
+2024-09-25 15:26:58,550 WARN k.i.r.w.c.CarController [http-nio-8080-exec-1] Get All Cars Controller WARN
+2024-09-25 15:26:58,550 INFO k.i.r.b.c.CarManager [http-nio-8080-exec-1] Car Manager Get All INFO
+2024-09-25 15:26:58,550 WARN k.i.r.b.c.CarManager [http-nio-8080-exec-1] Car Manager Get All WARN
+2024-09-25 15:27:05,756 INFO k.i.r.w.c.CarController [http-nio-8080-exec-2] Get All Cars Controller INFO
+2024-09-25 15:27:05,757 WARN k.i.r.w.c.CarController [http-nio-8080-exec-2] Get All Cars Controller WARN
+2024-09-25 15:27:05,757 INFO k.i.r.b.c.CarManager [http-nio-8080-exec-2] Car Manager Get All INFO
+2024-09-25 15:27:05,757 WARN k.i.r.b.c.CarManager [http-nio-8080-exec-2] Car Manager Get All WARN
+2024-09-25 15:27:19,310 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-09-25 15:27:19,319 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-75] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25 15:27:19,319 INFO c.z.h.HikariDataSource [Thread-75] HikariPool-19 - Shutdown initiated...
+2024-09-25 15:27:19,324 INFO c.z.h.HikariDataSource [Thread-75] HikariPool-19 - Shutdown completed.
+2024-09-25 15:27:19,422 INFO o.s.b.StartupInfoLogger [restartedMain] Starting RentACarApplication using Java 22.0.1 with PID 12764 (C:\Users\Ulaş Gaming\git\repository2\rentACar\target\classes started by Ulaş Gaming in C:\Users\Ulaş Gaming\git\repository2\rentACar)
+2024-09-25 15:27:19,422 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-09-25 15:27:19,602 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25 15:27:19,619 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 16 ms. Found 3 JPA repository interfaces.
+2024-09-25 15:27:19,685 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
+2024-09-25 15:27:19,687 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-09-25 15:27:19,687 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-25 15:27:19,714 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-09-25 15:27:19,714 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 290 ms
+2024-09-25 15:27:19,737 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25 15:27:19,739 WARN o.h.j.b.i.EntityManagerFactoryBuilderImpl [restartedMain] HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2024-09-25 15:27:19,740 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2024-09-25 15:27:19,748 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25 15:27:19,750 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-20 - Starting...
+2024-09-25 15:27:19,794 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-20 - Added connection org.postgresql.jdbc.PgConnection@6b063e94
+2024-09-25 15:27:19,794 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-20 - Start completed.
+2024-09-25 15:27:19,801 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-25 15:27:19,858 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25 15:27:19,911 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25 15:27:20,034 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25 15:27:20,107 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-09-25 15:27:20,114 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8080 (http) with context path '/'
+2024-09-25 15:27:20,117 INFO o.s.b.StartupInfoLogger [restartedMain] Started RentACarApplication in 0.727 seconds (process running for 607.358)
+2024-09-25 15:27:20,117 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2024-09-25 15:27:22,285 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25 15:27:22,285 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2024-09-25 15:27:22,286 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 1 ms
+2024-09-25 15:27:22,288 INFO k.i.r.w.c.CarController [http-nio-8080-exec-2] Get All Cars Controller INFO
+2024-09-25 15:27:22,288 WARN k.i.r.w.c.CarController [http-nio-8080-exec-2] Get All Cars Controller WARN
+2024-09-25 15:27:22,288 INFO k.i.r.b.c.CarManager [http-nio-8080-exec-2] Car Manager Get All INFO
+2024-09-25 15:27:22,288 WARN k.i.r.b.c.CarManager [http-nio-8080-exec-2] Car Manager Get All WARN
+2024-09-25 15:27:28,516 INFO k.i.r.w.c.CarController [http-nio-8080-exec-1] Get All Cars Controller INFO
+2024-09-25 15:27:28,516 WARN k.i.r.w.c.CarController [http-nio-8080-exec-1] Get All Cars Controller WARN
+2024-09-25 15:27:28,516 INFO k.i.r.b.c.CarManager [http-nio-8080-exec-1] Car Manager Get All INFO
+2024-09-25 15:27:28,516 WARN k.i.r.b.c.CarManager [http-nio-8080-exec-1] Car Manager Get All WARN
+2024-09-25 15:27:34,004 INFO k.i.r.w.c.CarController [http-nio-8080-exec-3] Get All Cars Controller INFO
+2024-09-25 15:27:34,004 WARN k.i.r.w.c.CarController [http-nio-8080-exec-3] Get All Cars Controller WARN
+2024-09-25 15:27:34,004 INFO k.i.r.b.c.CarManager [http-nio-8080-exec-3] Car Manager Get All INFO
+2024-09-25 15:27:34,004 WARN k.i.r.b.c.CarManager [http-nio-8080-exec-3] Car Manager Get All WARN
+2024-09-25 15:28:18,010 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-09-25 15:28:18,020 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-79] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25 15:28:18,021 INFO c.z.h.HikariDataSource [Thread-79] HikariPool-20 - Shutdown initiated...
+2024-09-25 15:28:18,027 INFO c.z.h.HikariDataSource [Thread-79] HikariPool-20 - Shutdown completed.
+2024-09-25 15:28:18,430 WARN o.h.j.b.i.EntityManagerFactoryBuilderImpl [restartedMain] HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2024-09-25 15:28:18,495 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-25 15:28:18,692 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25 15:28:20,946 WARN k.i.r.w.c.CarController [http-nio-8080-exec-1] Get All Cars Controller WARN
+2024-09-25 15:28:20,946 WARN k.i.r.b.c.CarManager [http-nio-8080-exec-1] Car Manager Get All WARN
+2024-09-25 15:28:32,667 INFO o.s.b.StartupInfoLogger [restartedMain] Starting RentACarApplication using Java 22.0.1 with PID 12764 (C:\Users\Ulaş Gaming\git\repository2\rentACar\target\classes started by Ulaş Gaming in C:\Users\Ulaş Gaming\git\repository2\rentACar)
+2024-09-25 15:28:32,667 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-09-25 15:28:32,830 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25 15:28:32,849 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 18 ms. Found 3 JPA repository interfaces.
+2024-09-25 15:28:32,911 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
+2024-09-25 15:28:32,911 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-09-25 15:28:32,912 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-25 15:28:32,933 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-09-25 15:28:32,933 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 264 ms
+2024-09-25 15:28:32,958 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25 15:28:32,959 WARN o.h.j.b.i.EntityManagerFactoryBuilderImpl [restartedMain] HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2024-09-25 15:28:32,960 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2024-09-25 15:28:32,968 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25 15:28:32,969 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-22 - Starting...
+2024-09-25 15:28:33,016 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-22 - Added connection org.postgresql.jdbc.PgConnection@1d6d7084
+2024-09-25 15:28:33,016 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-22 - Start completed.
+2024-09-25 15:28:33,024 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-25 15:28:33,071 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25 15:28:33,126 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25 15:28:33,226 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25 15:28:33,326 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-09-25 15:28:33,344 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8080 (http) with context path '/'
+2024-09-25 15:28:33,350 INFO o.s.b.StartupInfoLogger [restartedMain] Started RentACarApplication in 0.706 seconds (process running for 680.584)
+2024-09-25 15:28:33,351 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2024-09-25 15:28:40,283 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25 15:28:40,283 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-09-25 15:28:40,284 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2024-09-25 15:28:40,286 INFO k.i.r.w.c.CarController [http-nio-8080-exec-1] Get All Cars Controller INFO
+2024-09-25 15:28:40,286 WARN k.i.r.w.c.CarController [http-nio-8080-exec-1] Get All Cars Controller WARN
+2024-09-25 15:28:40,286 INFO k.i.r.b.c.CarManager [http-nio-8080-exec-1] Car Manager Get All INFO
+2024-09-25 15:28:40,286 WARN k.i.r.b.c.CarManager [http-nio-8080-exec-1] Car Manager Get All WARN

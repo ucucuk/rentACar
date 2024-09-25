@@ -20,7 +20,8 @@ import kodlama.io.rentACar.entities.concretes.Car;
 import kodlama.io.rentACar.entities.concretes.CarDto;
 import kodlama.io.rentACar.entities.concretes.Model;
 import lombok.AllArgsConstructor;
-
+import lombok.extern.slf4j.Slf4j;
+@Slf4j
 @Service
 @AllArgsConstructor
 public class CarManager implements CarService {
@@ -32,6 +33,9 @@ public class CarManager implements CarService {
 
 	@Override
 	public List<CarDto> getAll() {
+		log.debug("Car Manager Get All DEBUG");
+		log.info("Car Manager Get All INFO");
+		log.warn("Car Manager Get All WARN");
 		// TODO Auto-generated method stub
 		List<Car> cars = carRepository.findAll();
 //		List<GetAllCarsResponse> allCarsResponses = new ArrayList<GetAllCarsResponse>();

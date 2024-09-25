@@ -19,7 +19,9 @@ import kodlama.io.rentACar.business.responses.car.GetByModelYearJPQLCarsResponse
 import kodlama.io.rentACar.business.responses.car.GetByPlateCarResponse;
 import kodlama.io.rentACar.entities.concretes.CarDto;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @AllArgsConstructor
 @RestController // annotation
 @RequestMapping("/api/cars")
@@ -40,8 +42,12 @@ public class CarController {
 	public List<CarDto> getCarfindByBrand(String brand) {
 		return this.carService.getCarfindByBrand(brand);
 	}
+
 	@GetMapping
 	public List<CarDto> getAll() {
+		log.debug("Get All Cars Controller DEBUG");
+		log.info("Get All Cars Controller INFO");
+		log.warn("Get All Cars Controller WARN");
 		return this.carService.getAll();
 	}
 
