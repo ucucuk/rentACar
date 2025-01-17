@@ -1,5 +1,7 @@
 package kodlama.io.rentACar.core.utilities.mappers;
 
+import java.util.List;
+
 import org.mapstruct.Mapper;
 
 import kodlama.io.rentACar.entities.concretes.Brand;
@@ -13,4 +15,5 @@ public interface BrandMapper {
 
 	BrandDto map(Brand brand);
 
+	List<BrandDto> listMap(List<Brand> listBrand);
 }

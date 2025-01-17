@@ -24,17 +24,17 @@ public class ModelManager implements ModelService {
 	private ModelRepository modelRepository;
 	private ModelMapperService modelMapperService;
 	private ModelBusinessRules modelBusinessRules;
-	private ModelMapper modelMapper;
+//	private ModelMapper modelMapper;
 
 	@Override
 	public List<ModelDto> getAll() {
 
 		List<Model> models = modelRepository.findAll();
-//		List<GetAllModelsResponse> modelsResponse = models.stream()
-//				.map(model -> this.modelMapperService.forResponse().map(model, GetAllModelsResponse.class))
-//				.collect(Collectors.toList());
-		List<ModelDto> modelsResponse = models.stream().map(model -> modelMapper.map(model))
+		List<ModelDto> modelsResponse = models.stream()
+				.map(model -> this.modelMapperService.forResponse().map(model, ModelDto.class))
 				.collect(Collectors.toList());
+//		List<ModelDto> modelsResponse = models.stream().map(model -> modelMapper.map(model))
+//				.collect(Collectors.toList());
 		return modelsResponse;
 	}
 

@@ -29,7 +29,7 @@ public class CarManager implements CarService {
 	private ModelRepository modelRepository;
 	private ModelMapperService modelMapperService;
 	private CarBusinessRules carBusinessRules;
-	private final CarMapper carMapper;
+//	private final CarMapper carMapper;
 
 	@Override
 	public List<CarDto> getAll() {
@@ -38,12 +38,12 @@ public class CarManager implements CarService {
 		log.warn("Car Manager Get All WARN");
 		// TODO Auto-generated method stub
 		List<Car> cars = carRepository.findAll();
-//		List<GetAllCarsResponse> allCarsResponses = new ArrayList<GetAllCarsResponse>();
-//		allCarsResponses = cars.stream()
-//				.map(car -> this.modelMapperService.forResponse().map(car, GetAllCarsResponse.class))
-//				.collect(Collectors.toList());
 		List<CarDto> allCarsResponses = new ArrayList<CarDto>();
-		allCarsResponses = cars.stream().map(car -> this.carMapper.map(car)).collect(Collectors.toList());
+		allCarsResponses = cars.stream()
+				.map(car -> this.modelMapperService.forResponse().map(car, CarDto.class))
+				.collect(Collectors.toList());
+//		List<CarDto> allCarsResponses = new ArrayList<CarDto>();
+//		allCarsResponses = cars.stream().map(car -> this.carMapper.map(car)).collect(Collectors.toList());
 		return allCarsResponses;
 	}
 
@@ -93,7 +93,9 @@ public class CarManager implements CarService {
 	public List<CarDto> getCarfindByBrand(String brand) {
 		// TODO Auto-generated method stub
 		List<Car> cars = carRepository.findByCarBrandNameIgnoreCaseJPQL(brand);
-		List<CarDto> getCarfindByBrand = this.carMapper.listMap(cars);
+		List<CarDto> getCarfindByBrand =  cars.stream()
+				.map(car -> this.modelMapperService.forResponse().map(car, CarDto.class))
+				.collect(Collectors.toList());
 
 		return getCarfindByBrand;
 	}

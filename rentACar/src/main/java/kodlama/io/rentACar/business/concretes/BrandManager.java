@@ -27,16 +27,16 @@ public class BrandManager implements BrandService {
 	private BrandRepository brandRepository;
 	private ModelMapperService modelMapperService;
 	private BrandBusinessRules brandBusinessRules;
-	private BrandMapper brandMapper;
+//	private BrandMapper brandMapper;
 
 	@Override
 	public List<BrandDto> getAll() {
 		List<Brand> brands = brandRepository.findAll();
-//		List<GetAllBrandsResponse> brandsResponse = brands.stream()
-//				.map(brand -> this.modelMapperService.forResponse().map(brand, GetAllBrandsResponse.class))
-//				.collect(Collectors.toList());
-		List<BrandDto> brandsResponse = brands.stream().map(brand -> brandMapper.map(brand))
+		List<BrandDto> brandsResponse = brands.stream()
+				.map(brand -> this.modelMapperService.forResponse().map(brand, BrandDto.class))
 				.collect(Collectors.toList());
+//		List<BrandDto> brandsResponse = brands.stream().map(brand -> brandMapper.map(brand))
+//				.collect(Collectors.toList());
 		return brandsResponse;
 	}
 

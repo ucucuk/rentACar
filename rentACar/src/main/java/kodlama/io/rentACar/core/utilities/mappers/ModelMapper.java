@@ -11,5 +11,5 @@ public interface ModelMapper {
 
 	Model map(ModelDto modelDto);
 
-	ModelDto map(Model car);
+	ModelDto map(Model model);
 }
